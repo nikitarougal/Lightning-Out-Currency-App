@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Currency App</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://empathetic-hawk-rtfku9-dev-ed.trailblaze.my.site.com/lightning-out-currency-app/lightning/lightning.out.js"></script>
+    <script src="https://empathetic-hawk-rtfku9-dev-ed.trailblaze.my.site.com/lightning/lightning.out.js"></script>
     <script>
+      const curConverter = document.querySelector('#currencyConverter');
+      const curForm = document.querySelector('#currencyForm');
+      const curTable = document.querySelector('#currencyTable');
       $Lightning.use(
         'c:LightningOutCurrencyApp', // name of the Lightning app
         function () {
@@ -14,7 +17,7 @@
           $Lightning.createComponent(
             'c:currencyConverter', // top-level component of your app
             {}, // attributes to set on the component when created
-            'currencyConverter', // the DOM location to insert the component
+            curConverter, // the DOM location to insert the component
             function (cmp) {
               // callback when component is created and active on the page
             }
@@ -25,7 +28,7 @@
           $Lightning.createComponent(
             'c:currencyForm', // top-level component of your app
             {}, // attributes to set on the component when created
-            'currencyForm', // the DOM location to insert the component
+            curForm, // the DOM location to insert the component
             function (cmp) {
               // callback when component is created and active on the page
             }
@@ -36,13 +39,13 @@
           $Lightning.createComponent(
             'c:currencyTable', // top-level component of your app
             {}, // attributes to set on the component when created
-            'currencyTable', // the DOM location to insert the component
+            curTable, // the DOM location to insert the component
             function (cmp) {
               // callback when component is created and active on the page
             }
           );
         },
-        'https://empathetic-hawk-rtfku9-dev-ed.trailblaze.my.site.com/lightning-out-currency-app/' // Site endpoint
+        'https://empathetic-hawk-rtfku9-dev-ed.trailblaze.my.site.com/' // Site endpoint
       );
     </script>
   </head>
