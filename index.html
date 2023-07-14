@@ -12,28 +12,7 @@
       //const curTable = document.querySelector('#currencyTable');
       $Lightning.use(
         'c:LightningOutCurrencyApp', // name of the Lightning app
-        function () {
-          // Callback once framework and app loaded
-          $Lightning.createComponent(
-            'c:currencyConverter', // top-level component of your app
-            {}, // attributes to set on the component when created
-            'currencyConverter', // the DOM location to insert the component
-            function (cmp) {
-              console.log('currencyConverter component created'); // callback when component is created and active on the page
-            }
-          );
-        },
-        function () {
-          // Callback once framework and app loaded
-          $Lightning.createComponent(
-            'c:currencyForm', // top-level component of your app
-            {}, // attributes to set on the component when created
-            'currencyForm', // the DOM location to insert the component
-            function (cmp) {
-              console.log('currencyForm component created'); // callback when component is created and active on the page
-            }
-          );
-        },
+        
         function () {
           // Callback once framework and app loaded
           $Lightning.createComponent(
