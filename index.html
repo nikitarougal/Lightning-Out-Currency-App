@@ -15,20 +15,41 @@
     </div>
     <script src="https://publicsites-dev-ed.develop.my.site.com/currencyapp/lightning/lightning.out.js"></script>
     <script>
-      //const curConverter = document.querySelector('#currencyConverter');
-      //const curForm = document.querySelector('#currencyForm');
-      //const curTable = document.querySelector('#currencyTable');
+      const curConverter = document.querySelector('#currencyConverter');
+      const curForm = document.querySelector('#currencyForm');
+      const curTable = document.querySelector('#currencyTable');
       $Lightning.use(
         'c:LightningOutCurrencyApp', // name of the Lightning app
-        
         function () {
           // Callback once framework and app loaded
           $Lightning.createComponent(
             'c:currencyConverter', // top-level component of your app
             {}, // attributes to set on the component when created
-            'currencyConverter', // the DOM location to insert the component
+            curConverter, // the DOM location to insert the component
             function (cmp) {
               console.log('currencyConverter component created'); // callback when component is created and active on the page
+            }
+          );
+        },
+        function () {
+          // Callback once framework and app loaded
+          $Lightning.createComponent(
+            'c:currencyForm', // top-level component of your app
+            {}, // attributes to set on the component when created
+            curForm, // the DOM location to insert the component
+            function (cmp) {
+              console.log('currencyForm component created'); // callback when component is created and active on the page
+            }
+          );
+        },
+        function () {
+          // Callback once framework and app loaded
+          $Lightning.createComponent(
+            'c:currencyTable', // top-level component of your app
+            {}, // attributes to set on the component when created
+            curTable, // the DOM location to insert the component
+            function (cmp) {
+              console.log('currencyTable component created'); // callback when component is created and active on the page
             }
           );
         },
