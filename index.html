@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Currency App</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://publicsites-dev-ed.develop.my.site.com/currencyapp/lightning/lightning.out.js?v=2"></script>
+    <script src="https://publicsites-dev-ed.develop.my.site.com/currencyapp/s/lightning/lightning.out.js?v=2"></script>
     <script>
       //const curConverter = document.querySelector('#currencyConverter');
       //const curForm = document.querySelector('#currencyForm');
@@ -16,15 +16,15 @@
         function () {
           // Callback once framework and app loaded
           $Lightning.createComponent(
-            'c:currencyTable', // top-level component of your app
+            'c:currencyConverter', // top-level component of your app
             {}, // attributes to set on the component when created
-            'currencyTable', // the DOM location to insert the component
+            'currencyConverter', // the DOM location to insert the component
             function (cmp) {
-              console.log('currencyTable component created'); // callback when component is created and active on the page
+              console.log('currencyConverter component created'); // callback when component is created and active on the page
             }
           );
         },
-        'https://publicsites-dev-ed.develop.my.site.com/currencyapp' // Site endpoint
+        'https://publicsites-dev-ed.develop.my.site.com/currencyapp/s' // Site endpoint
       );
     </script>
   </head>
