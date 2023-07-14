@@ -30,10 +30,7 @@
               console.log('currencyConverter component created'); // callback when component is created and active on the page
             }
           );
-        },
-        function () {
-          // Callback once framework and app loaded
-          $Lightning.createComponent(
+            $Lightning.createComponent(
             'c:currencyForm', // top-level component of your app
             {}, // attributes to set on the component when created
             curForm, // the DOM location to insert the component
@@ -41,9 +38,6 @@
               console.log('currencyForm component created'); // callback when component is created and active on the page
             }
           );
-        },
-        function () {
-          // Callback once framework and app loaded
           $Lightning.createComponent(
             'c:currencyTable', // top-level component of your app
             {}, // attributes to set on the component when created
@@ -52,7 +46,7 @@
               console.log('currencyTable component created'); // callback when component is created and active on the page
             }
           );
-        },
+                       },
         'https://publicsites-dev-ed.develop.my.site.com/currencyapp' // Site endpoint
       );
     </script>
